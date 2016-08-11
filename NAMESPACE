@@ -1,0 +1,15 @@
+importFrom(survival, Surv)
+
+importFrom(stats, .getXlevels, add.scope, as.formula, coef,
+           drop.scope, formula, model.extract, model.matrix,
+           model.response, nlm, pchisq, pnorm, predict, 
+           printCoefmat, rnorm, terms, update, vcov)
+
+S3method(predict, mpr)
+S3method(print, mpr)
+S3method(print, summary.mpr)
+S3method(summary, mpr)
+S3method(update, mpr)
+S3method(vcov, mpr)
+
+export(addterm, dropterm, extractIC, mpr, stepmpr)
