@@ -12,11 +12,11 @@ function(formula,data,family="Weibull",init,iterlim=1000,...){
    rhs <- formula[[3]]
 
    if(length(rhs)==1){
-      formtemp <- as.formula(paste("~list(~",deparse(rhs),")"))
+      formtemp <- as.formula(paste("~list(~",.deparse(rhs),")"))
       rhs <- formtemp[[2]]
    }else{
-      if(deparse(rhs[1])!="list()"){
-         formtemp <- as.formula(paste("~list(~",deparse(rhs),")"))
+      if(.deparse(rhs[1])!="list()"){
+         formtemp <- as.formula(paste("~list(~",.deparse(rhs),")"))
          rhs <- formtemp[[2]]
       }
    }
@@ -43,8 +43,8 @@ function(formula,data,family="Weibull",init,iterlim=1000,...){
       formt <- ~1
    }
 
-   formtemp <- paste(deparse(formb),deparse(forma),deparse(formt),sep=",")
-   formtemp <- paste(c(deparse(formula[[2]]),"~list(",formtemp,")"),collapse="")
+   formtemp <- paste(.deparse(formb),.deparse(forma),.deparse(formt),sep=",")
+   formtemp <- paste(c(.deparse(formula[[2]]),"~list(",formtemp,")"),collapse="")
    formula <- as.formula(formtemp)
 
    allterms <- lapply(lapply(list(formb,forma,formt), terms), attr, "term.labels")
@@ -52,10 +52,10 @@ function(formula,data,family="Weibull",init,iterlim=1000,...){
   
    if(length(allterms) == 0){
       formall <- "~1"
-      formall <- formula(paste(deparse(formula[[2]]), formall))
+      formall <- formula(paste(.deparse(formula[[2]]), formall))
    }else{
       formall <- paste("~",paste(allterms, collapse="+"), sep="")
-      formall <- formula(paste(deparse(formula[[2]]), formall))
+      formall <- formula(paste(.deparse(formula[[2]]), formall))
    }
 
    mf <- cl <- match.call()
@@ -73,7 +73,7 @@ function(formula,data,family="Weibull",init,iterlim=1000,...){
    }
 
    xlevels <- .getXlevels(terms(formall), mf)
-   xvars <- sapply(attr(terms(formall), "variables"), deparse)[-c(1,2)]
+   xvars <- sapply(attr(terms(formall), "variables"), .deparse)[-c(1,2)]
 
    tideltai <- model.extract(mf, "response")[,1:2]
 

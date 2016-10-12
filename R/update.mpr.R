@@ -22,7 +22,7 @@ function(object, new, comp=1:(object$ncomp), ...){
       }
    }
    formtemp <- paste(rhs[1:ncomp],collapse=",")
-   formtemp <- paste(c(deparse(formula[[2]]),"~list(",formtemp,")"),collapse="")
+   formtemp <- paste(c(.deparse(formula[[2]]),"~list(",formtemp,")"),collapse="")
    formula <- as.formula(formtemp)  
    
    call <- object$call

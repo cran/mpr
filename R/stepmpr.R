@@ -48,7 +48,7 @@ function(object, scope=list(lower=~1, upper=~.), comp=1:(object$ncomp),
       rhs <- eval(bestmodel$formula[[3]])
       cat("Components:\n")
       for(i in 1:ncomp){
-         cat(i, deparse(rhs[[i]]), "\n")
+         cat(i, .deparse(rhs[[i]]), "\n")
       }
    }
    j <- 1
@@ -115,7 +115,7 @@ function(object, scope=list(lower=~1, upper=~.), comp=1:(object$ncomp),
       rhs <- eval(bestmodel$formula[[3]])
       cat("Components:\n")
       for(i in 1:ncomp){
-         cat(i, deparse(rhs[[i]]), "\n")
+         cat(i, .deparse(rhs[[i]]), "\n")
       }
    }
    j <- j + 1
