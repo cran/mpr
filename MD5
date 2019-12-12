@@ -1,4 +1,4 @@
-f515ce96a2df2046d9359b4a23f0f04b *DESCRIPTION
+3749f27fdb1d483f6c7d3566a95c8754 *DESCRIPTION
 49f37326e3126074d92318840d827cef *NAMESPACE
 360e88df03fe46f663c894a9a719c083 *R/addterm.R
 ac090eea81566013b3222ac169b3c70d *R/dropterm.R
@@ -9,7 +9,7 @@ e604cec0beb31f254db1baffeb1e9418 *R/mpr.R
 5f0710c0fc43ab384d8e3b6b8870e549 *R/overallpval.R
 6c0fc594b175775aff7d658d32e180aa *R/predict.mpr.R
 0de4dc5a3d4cb5c72ac0cec6691501f7 *R/print.mpr.R
-ea367c4d3ec434b1d1419b647a881612 *R/print.summary.mpr.R
+c5a8ef3d327399237cbacb503ba47a9d *R/print.summary.mpr.R
 90d5ab954158548ea57eeb5dd05b80d7 *R/stepmpr.R
 7ab4ee2390658fff59fbe4ecbe5c11fd *R/summary.mpr.R
 1c0a74aea93eb4716cbe16c810b3f482 *R/update.mpr.R

@@ -6,11 +6,13 @@ function(x, ...){
    print(x$model)
    cat("\nCoefficients:\n")
 
-   if(class(x$overallpmat)=="matrix"){
+   if(length(dim(x$overallpmat))==2){
       printCoefmat(x$coefmat, P.values=TRUE, has.Pvalue=TRUE, signif.legend=FALSE)
       cat("---\nOverall:\n")
-      printCoefmat(x$overallpmat, P.values=TRUE, has.Pvalue=TRUE)
+      printCoefmat(x$overallpmat, P.values=TRUE, has.Pvalue=TRUE, signif.legend=FALSE)
+      cat("---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n")
    }else{
-      printCoefmat(x$coefmat, P.values=TRUE, has.Pvalue=TRUE)
+      printCoefmat(x$coefmat, P.values=TRUE, has.Pvalue=TRUE, signif.legend=FALSE)
+      cat("---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n")
    }
 }
