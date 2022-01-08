@@ -96,7 +96,7 @@ function(object, scope=list(lower=~1, upper=~.), comp=1:(object$ncomp),
             bestic <- extractIC(bestmodel, aic)
          }
       }   
-   taborder <- order(modeltab[sortby])
+   taborder <- order(modeltab[[sortby]])
    modeltab <- modeltab[taborder,]
    row.names(modeltab) <- 1:(dim(modeltab)[1])
    modeltab[c("loglike","aic","bic")] <- round(modeltab[c("loglike","aic","bic")],1)

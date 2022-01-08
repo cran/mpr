@@ -29,7 +29,7 @@ Kevin Burke.
 }
 \examples{
 # Veterans' administration lung cancer data
-data(veteran, package="survival")
+veteran <- survival::veteran
 head(veteran)
 
 mod1 <- mpr(Surv(time, status) ~ list(~ trt, ~ trt), data=veteran, family="Weibull")

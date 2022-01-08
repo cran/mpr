@@ -52,7 +52,7 @@ Kevin Burke.
 }
 \examples{
 # Veterans' administration lung cancer data
-data(veteran, package="survival")
+veteran <- survival::veteran
 head(veteran)
 
 # Weibull MPR treatment model

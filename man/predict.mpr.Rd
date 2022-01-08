@@ -53,7 +53,7 @@ Kevin Burke.
 library(survival)
 
 # Veterans' administration lung cancer data
-data(veteran)
+veteran <- survival::veteran
 head(veteran)
 
 # Weibull MPR treatment model

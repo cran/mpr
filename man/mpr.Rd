@@ -174,7 +174,7 @@ mpr(formula, data, family = "Weibull", init, iterlim = 1000, ...)
 }
 \examples{
 # Veterans' administration lung cancer data
-data(veteran, package="survival")
+veteran <- survival::veteran
 head(veteran)
 
 # treatment variable, "trt", in scale (lambda) and shape (gamma)
